@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MacCalc">
+
+
+
+
+    <TextView
+        android:id="@+id/txtMCal"
+        android:layout_width="222dp"
+        android:layout_height="72dp"
+        android:text="Maintenance Calories"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.486"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <Button
+        android:id="@+id/btnGetMCal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnBtnGetMCalClick"
+        android:text="Get Maintenance Calories"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtMCal"
+        app:layout_constraintVertical_bias="0.544" />
+
+    <EditText
+        android:id="@+id/edtTxtHeight"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:hint="Height (cm):"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtTxtWeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.864" />
+
+    <EditText
+        android:id="@+id/edtTxtWeight"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Weight (kg):"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/edtTxtAge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edtTxtAge"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:hint="Age:"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerGender"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtMCal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerActivity"
+        android:layout_width="222dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtMCal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerGender"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <Button
+        android:id="@+id/btnNewItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Item"
+        app:layout_constraintBottom_toTopOf="@+id/edtTxtHeight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
