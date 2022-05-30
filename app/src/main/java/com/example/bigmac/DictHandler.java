@@ -1,25 +1,18 @@
 package com.example.bigmac;
 
 import java.util.Dictionary;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
-public class MasterDict
+public class DictHandler
 {
-    private Dictionary< String, Dictionary<String, Item> > masterDict;
+    private Dictionary< String, Dictionary<String, Item> > masterDict = new Hashtable<>();
 
     //for testing, for now Item objects should be put in this dict
-    private Dictionary <String, Item> testDict;
+    public Dictionary <String, Item> testDict = new Hashtable<>();
 
-    //self explanatory
-    public Dictionary< String, Dictionary<String, Item> > getMasterDict()
-    {
-        return masterDict;
-    }
-
-    //self explanatory
-    public Dictionary < String, Item > getTestDict()
-    {
-        return testDict;
-    }
+    public Dictionary< String, Dictionary<String, Item> > getMasterDict() {return masterDict;}
+    public Dictionary< String, Item > getTestDict() {return testDict;}
 
     //add dict to masterDict;
     public void addToMasterDict(Dictionary<String, Item> dict)
@@ -42,6 +35,7 @@ public class MasterDict
     //self explanatory
     public void addItemToDict( Dictionary <String, Item> dict, Item item)
     {
-
+        dict.put(item.getName(), item);
+        item.printItem(item);
     }
 }

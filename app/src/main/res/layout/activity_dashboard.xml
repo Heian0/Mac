@@ -8,6 +8,19 @@
     tools:context=".Dashboard">
 
     <TextView
+        android:id="@+id/txtCurCarb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Carbs:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634" />
+
+    <TextView
         android:id="@+id/txtCurCal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +80,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintHorizontal_bias="0.3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.554" />
@@ -137,6 +150,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.554" />
 
+    <TextView
+        android:id="@+id/txtCarbCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carbs"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.688"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.634" />
+
     <Button
         android:id="@+id/btnMacCalc"
         android:layout_width="wrap_content"
@@ -146,6 +172,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.657" />
+        app:layout_constraintVertical_bias="0.727" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
