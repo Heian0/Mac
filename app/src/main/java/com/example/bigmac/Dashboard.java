@@ -25,12 +25,28 @@ public class Dashboard extends AppCompatActivity {
                 GoToMacCalc();
             }
         });
+
+        Button btnTracker = findViewById(R.id.btnTracker);
+        btnTracker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                GoToTracker();
+            }
+        });
     }
 
 
     private void GoToMacCalc()
     {
         Intent intent = new Intent(this, MacCalc.class);
+        System.out.println(this);
+        startActivity(intent);
+    }
+
+    private void GoToTracker()
+    {
+        Intent intent = new Intent(this, Tracker.class);
         System.out.println(this);
         startActivity(intent);
     }

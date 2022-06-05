@@ -15,6 +15,7 @@ public class NewItem extends AppCompatActivity {
 
     private Button btnAddNewItem;
     private DictHandler dictHandler = new DictHandler();
+    private TrackerHandler trackerHandler = new TrackerHandler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

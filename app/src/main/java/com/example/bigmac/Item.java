@@ -17,6 +17,13 @@ public class Item
     public boolean knowSod;
     public boolean knowCarb;
 
+    /*
+    public String toString()
+    {
+        return "Name: ";
+    }
+    */
+
     public String getName() { return name; }
 
     public int getCalories() {
