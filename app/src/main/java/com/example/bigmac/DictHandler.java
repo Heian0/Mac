@@ -15,9 +15,9 @@ public class DictHandler
     public Dictionary< String, Item > getTestDict() {return testDict;}
 
     //add dict to masterDict;
-    public void addToMasterDict(Dictionary<String, Item> dict)
+    public void addToMasterDict(String dictName, Dictionary <String, Item> dict)
     {
-
+        masterDict.put(dictName, dict);
     }
 
     //input from file (data storage) should be written to dict
