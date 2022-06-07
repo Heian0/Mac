@@ -44,6 +44,7 @@ public class Dashboard extends AppCompatActivity {
         startActivity(intent);
     }
 
+
     private void GoToTracker()
     {
         Intent intent = new Intent(this, Tracker.class);
