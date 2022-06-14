@@ -7,7 +7,8 @@ import android.os.Bundle;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import java.util.Enumeration;
+import java.util.Set;
+import java.util.Hashtable;
 
 public class Tracker extends AppCompatActivity {
 
@@ -19,15 +20,11 @@ public class Tracker extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tracker);
 
-        ViewGroup trackerLayout = (ViewGroup) findViewById(R.id.trackerCLay);
-        Item itemy = new Item("asd", 1, 1, 1, 1, 1, 1);
-        dictHandler.addItemToDict(dictHandler.testDict, itemy);
-        Enumeration<String> e = dictHandler.testDict.keys();
-        while (e.hasMoreElements())
+        ViewGroup trackerVG = (ViewGroup) findViewById(R.id.trackerVG);
+
+        for (String key : dictHandler.testDict.keySet())
         {
-            System.out.println("hjajdbak");
-            String key = e.nextElement();
-            trackerHandler.displayNewItem(dictHandler.testDict.get(key), trackerLayout, this);
+            trackerHandler.displayNewItem(dictHandler.testDict.get(key), trackerVG, this);
         }
     }
 }

@@ -1,10 +1,14 @@
 package com.example.bigmac;
 
+import java.util.Hashtable;
+
 public class User
 {
     private String username;
     private int gender;
     private int activity;
+
+    public Hashtable<String, Integer> userDailyMacrosDict = new Hashtable<>();
 
     public String getUsername() {
         return username;
@@ -28,5 +32,16 @@ public class User
 
     public void setActivity(int activity) {
         this.activity = activity;
+    }
+
+    public void ResetDailyMacros()
+    {
+        userDailyMacrosDict.clear();
+        userDailyMacrosDict.put("cal", 0);
+        userDailyMacrosDict.put("pro", 0);
+        userDailyMacrosDict.put("fib", 0);
+        userDailyMacrosDict.put("sod", 0);
+        userDailyMacrosDict.put("sug", 0);
+        userDailyMacrosDict.put("carb", 0);
     }
 }
