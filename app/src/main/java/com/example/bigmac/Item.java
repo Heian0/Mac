@@ -1,5 +1,6 @@
 package com.example.bigmac;
 
+//Item class representing a real world food entity or meal
 public class Item
 {
     private String name;
@@ -9,13 +10,6 @@ public class Item
     private int sodium;
     private int sugar;
     private int carbs;
-
-    public boolean knowCal;
-    public boolean knowPro;
-    public boolean knowFib;
-    public boolean knowSug;
-    public boolean knowSod;
-    public boolean knowCarb;
 
     /*
     public String toString()

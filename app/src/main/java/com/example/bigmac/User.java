@@ -2,6 +2,7 @@ package com.example.bigmac;
 
 import java.util.Hashtable;
 
+//a user representing a real world user
 public class User
 {
     private String username;
@@ -34,7 +35,8 @@ public class User
         this.activity = activity;
     }
 
-    public void ResetDailyMacros()
+    //sets all macro counts to be zero
+    public void setDailyMacros()
     {
         userDailyMacrosDict.clear();
         userDailyMacrosDict.put("cal", 0);

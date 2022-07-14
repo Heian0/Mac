@@ -14,16 +14,11 @@ import android.view.View;
 import android.widget.Spinner;
 import android.text.TextUtils;
 
+//MacCalc activity
 public class MacCalc extends AppCompatActivity implements AdapterView.OnItemSelectedListener
 {
     private Calculator calculator = new Calculator();
     private User user = new User();
-    private ActivityHandler activityHandler = new ActivityHandler();
-
-    private Button btnGetMCal;
-    private Button btnNewItem;
-
-    private int activityIndex = 3;
 
     public static Context macCalcContext;
 
@@ -41,19 +36,11 @@ public class MacCalc extends AppCompatActivity implements AdapterView.OnItemSele
 
      */
 
+    //Sets the view of the activity and its ui input forms upon entering the activity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mac_calc);
-
-        Button btnNewItem = findViewById(R.id.btnNewItem);
-        btnNewItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v)
-            {
-                GoToNewItem();
-            }
-        });
 
 
         Spinner spinnerGender = findViewById(R.id.spinnerGender);
@@ -69,12 +56,9 @@ public class MacCalc extends AppCompatActivity implements AdapterView.OnItemSele
         spinnerActivity.setOnItemSelectedListener(this);
     }
 
-    private void GoToNewItem()
-    {
-        Intent intent = new Intent(this, NewItem.class);
-        startActivity(intent);
-    }
 
+
+    //calculates maintencae calories based on given parameters and displays result
     public void OnBtnGetMCalClick(View view)
     {
         EditText edtTxtAge = findViewById(R.id.edtTxtAge);
@@ -102,6 +86,7 @@ public class MacCalc extends AppCompatActivity implements AdapterView.OnItemSele
         }
     }
 
+    //controls the selection of the Spinners (drop down menus)
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
     {

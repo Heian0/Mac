@@ -1,5 +1,19 @@
 package com.example.bigmac;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
+import androidx.databinding.ObservableList;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.Hashtable;
@@ -14,28 +28,21 @@ public class DictHandler
     public Hashtable< String, Hashtable<String, Item> > getMasterDict() {return masterDict;}
     public Hashtable< String, Item > getTestDict() {return testDict;}
 
+
+
+
     //add dict to masterDict;
     public void addToMasterDict(String dictName, Hashtable <String, Item> dict)
     {
         masterDict.put(dictName, dict);
     }
 
-    //input from file (data storage) should be written to dict
-    public void writeToDict(Hashtable<String, Item> dict, String file)
-    {
-
-    }
-
-    //data in dict should be outputted to file to update data after user adds a new Item
-    public void writeToFile(Hashtable<String, Item> dict, String file)
-    {
-
-    }
-
-    //self explanatory
+    //adds Item to dict
     public void addItemToDict( Hashtable <String, Item> dict, Item item)
     {
         dict.put(item.getName(), item);
         item.printItem(item);
     }
+
+
 }

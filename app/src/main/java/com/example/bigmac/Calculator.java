@@ -2,6 +2,7 @@ package com.example.bigmac;
 
 public class Calculator
 {
+    //Returns maintenance calories based on given parameters using the Mifflin-St Jeor Equation
     public int CalculateMCal(int age, int height, int weight, int gender, int activity)
     {
         float TDEE = 0f;
